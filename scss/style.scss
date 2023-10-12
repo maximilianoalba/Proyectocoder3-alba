@@ -12,12 +12,13 @@
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/helpers";
 @import "../node_modules/bootstrap/scss/utilities/api";
+@import "./base/variables";
+@import "./base/mixin";
+@import "./base/exten";
+@import "./base/card";
 
 body {
-  background: linear-gradient(-45deg, #ee7752, #e47012, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
-  height: 100vh;
+  @include body-background;
 }
 
 @keyframes gradient {
@@ -33,125 +34,34 @@ body {
 }
 
 .main_contenedor {
-  margin: 5%;
-  padding: 5%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
+  @include contenedor-main;
 }
-.main-boton {
-  min-width: 130px;
-  height: 40px;
-  color: #fff;
-  padding: 5px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border-radius: 5px;
-  border: none;
-  background-size: 120% auto;
-  background-image: linear-gradient(315deg, #43cea2 0%, #185a9d 75%);
+.main-titulo{
+  color: $color-titulos
 }
-.main-boton:hover {
-  background-position: right center;
+.main-texto{
+  color: $color-parrafos
 }
-.main-boton:active {
-  top: 2px;
-}
+
+
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
   inherits: false;
 }
-.card {
-  width: 20rem;
-  padding: 3px;
-  position: relative;
-  border-radius: 6px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  font-size: 1.5em;
-  color: rgb(88 199 250 / 100%);
-  cursor: pointer;
-  font-family: "Courier New", Courier, monospace, cursive;
-}
-.card:hover {
-  color: rgb(88 199 250 / 100%);
-  transition: color 1s;
-}
 
-.card::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate),
-    #5ddcff,
-    #3c67e3 43%,
-    #4e00c2
-  );
-  position: absolute;
-  z-index: -1;
-  top: -1%;
-  left: -2%;
-  animation: spin 1.5s linear infinite;
-}
-
-.card::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate),
-    #5ddcff,
-    #3c67e3 43%,
-    #4e00c2
-  );
-  opacity: 1;
-  transition: opacity 0.5s;
-  animation: spin 2.5s linear infinite;
-}
-.main-texto-card {
-  color: #212534;
-  text-decoration: none;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-  margin-top: 2rem;
-}
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-  100% {
-    --rotate: 360deg;
-  }
-}
 .footer-a {
   margin: 10px;
   font-size: 30px;
   font-style: italic;
-  color: rgb(15, 15, 15);
+  color: $color-iconos;
 }
 .footer-a:hover {
-  color: rgb(88 199 250 / 100%);
+  color: $color-hover;
   transition: color 0.5s;
+}
+.form-label{
+  color: $color-titulos;
 }
 /*body {
   font-family: "Croissant One", cursive;

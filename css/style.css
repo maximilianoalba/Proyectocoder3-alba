@@ -6947,65 +6947,11 @@ progress {
     display: none !important;
   }
 }
-body {
-  background: linear-gradient(-45deg, #ee7752, #e47012, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
-  height: 100vh;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-.main_contenedor {
-  margin: 5%;
-  padding: 5%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
-}
-
-.main-boton {
-  min-width: 130px;
-  height: 40px;
-  color: #fff;
-  padding: 5px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border-radius: 5px;
-  border: none;
-  background-size: 120% auto;
-  background-image: linear-gradient(315deg, #43cea2 0%, #185a9d 75%);
-}
-
-.main-boton:hover {
-  background-position: right center;
-}
-
-.main-boton:active {
-  top: 2px;
-}
-
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
+/*color de textos y parrafos*/
+/* color de las card */
+/*Color de footer*/
+/*bady background*/
+/*Contenedor main*/
 .card {
   width: 20rem;
   padding: 3px;
@@ -7073,6 +7019,49 @@ body {
     --rotate: 360deg;
   }
 }
+body {
+  background: linear-gradient(-45deg, #ee7752, #e47012, #377f99, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.main_contenedor {
+  margin: 5%;
+  padding: 5%;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.main-titulo {
+  color: rgb(137, 169, 235);
+}
+
+.main-texto {
+  color: rgb(176, 197, 230);
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
 .footer-a {
   margin: 10px;
   font-size: 30px;
@@ -7083,6 +7072,10 @@ body {
 .footer-a:hover {
   color: rgb(88, 199, 250);
   transition: color 0.5s;
+}
+
+.form-label {
+  color: rgb(137, 169, 235);
 }
 
 /*body {
