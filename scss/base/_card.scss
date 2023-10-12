@@ -1,3 +1,4 @@
+/* animacion de tarjetaa */
 .card {
     width: 20rem;
     padding: 3px;
@@ -56,6 +57,7 @@
     transition: opacity 0.5s;
     animation: spin 2.5s linear infinite;
   }
+  /* textos de tarjeta */
   .main-texto-card {
     background-color: #9cadec;
     color: #212534;

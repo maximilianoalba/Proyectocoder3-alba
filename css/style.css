@@ -6952,6 +6952,7 @@ progress {
 /*Color de footer*/
 /*bady background*/
 /*Contenedor main*/
+/* animacion de tarjetaa */
 .card {
   width: 20rem;
   padding: 3px;
@@ -7003,6 +7004,7 @@ progress {
   animation: spin 2.5s linear infinite;
 }
 
+/* textos de tarjeta */
 .main-texto-card {
   background-color: #9cadec;
   color: #212534;
@@ -7046,6 +7048,7 @@ progress {
   top: 2px;
 }
 
+/*inicio de body*/
 body {
   background: linear-gradient(-45deg, #ee7752, #e47012, #377f99, #23d5ab);
   background-size: 400% 400%;
@@ -7064,6 +7067,16 @@ body {
     background-position: 0% 50%;
   }
 }
+.nav-item {
+  list-style-type: none;
+}
+.nav-item .nav-link {
+  color: rgb(88, 199, 250);
+}
+.nav-item .nav-link:hover {
+  color: rgb(236, 4, 4);
+}
+
 /*main*/
 .main_contenedor {
   margin: 5%;
@@ -7076,8 +7089,7 @@ body {
   align-items: center;
   align-content: space-around;
 }
-
-.main-titulo {
+.main_contenedor .main-titulo {
   color: rgb(137, 169, 235);
 }
 

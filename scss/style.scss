@@ -17,7 +17,7 @@
 @import "./base/exten";
 @import "./base/card";
 @import "./base/boton";
-
+/*inicio de body*/
 body {
   @include body-background;
 }
@@ -32,36 +32,45 @@ body {
     background-position: 0% 50%;
   }
 }
-/*main*/
-.main_contenedor {
-  @include contenedor-main;
-}
-.main-titulo{
-  color: $color-titulos
-}
-.main-texto{
-  font-size: 20px;
-  color: $color-parrafos
-}
-.main-titulo-dos{
-  color: $color-titulos;
-} 
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-/*Footer*/
-.footer-a {
-  margin: 10px;
-  font-size: 30px;
-  font-style: italic;
-  color: $color-iconos;
-  &:hover {
-  color: $color-hover;
-  transition: color 0.5s;
+.nav-item {
+  list-style-type: none;
+  .nav-link {
+    color: $color-hover;
+    &:hover {
+      color: rgb(236, 4, 4);
+    }
   }
 }
-.form-label{
-  color: $color-titulos;
-}
+  /*main*/
+  .main_contenedor {
+    @include contenedor-main;
+    .main-titulo {
+      color: $color-titulos;
+    }
+  }
+  .main-texto {
+    font-size: 20px;
+    color: $color-parrafos;
+  }
+  .main-titulo-dos {
+    color: $color-titulos;
+  }
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  /*Footer*/
+  .footer-a {
+    margin: 10px;
+    font-size: 30px;
+    font-style: italic;
+    color: $color-iconos;
+    &:hover {
+      color: $color-hover;
+      transition: color 0.5s;
+    }
+  }
+  .form-label {
+    color: $color-titulos;
+  }
