@@ -16,11 +16,11 @@
 @import "./base/mixin";
 @import "./base/exten";
 @import "./base/card";
+@import "./base/boton";
 
 body {
   @include body-background;
 }
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -32,7 +32,7 @@ body {
     background-position: 0% 50%;
   }
 }
-
+/*main*/
 .main_contenedor {
   @include contenedor-main;
 }
@@ -40,55 +40,28 @@ body {
   color: $color-titulos
 }
 .main-texto{
+  font-size: 20px;
   color: $color-parrafos
 }
-
-
+.main-titulo-dos{
+  color: $color-titulos;
+} 
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
   inherits: false;
 }
-
+/*Footer*/
 .footer-a {
   margin: 10px;
   font-size: 30px;
   font-style: italic;
   color: $color-iconos;
-}
-.footer-a:hover {
+  &:hover {
   color: $color-hover;
   transition: color 0.5s;
+  }
 }
 .form-label{
   color: $color-titulos;
 }
-/*body {
-  font-family: "Croissant One", cursive;
-  background: linear-gradient(90deg, #e04848 0%, #daae51 100%);
-  background-size: cover;
-  filter: opacity(5);
-}
-
-li {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.main_contenedor {
-  padding: 10%;
-}
-
-h1 {
-  color: rgb(137, 169, 235);
-}
-
-.lead {
-  color: rgb(176, 197, 230);
-}
-
-i::before {
-  width: 25px;
-  height: 15px;
-  font-size: 25px;
-  color: rgb(231, 83, 83);
-}*/
