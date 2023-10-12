@@ -14,7 +14,6 @@
 @import "../node_modules/bootstrap/scss/utilities/api";
 @import "./base/variables";
 @import "./base/mixin";
-@import "./base/exten";
 @import "./base/card";
 @import "./base/boton";
 /*inicio de body*/
@@ -41,36 +40,35 @@ body {
     }
   }
 }
-  /*main*/
-  .main_contenedor {
-    @include contenedor-main;
-    .main-titulo {
-      color: $color-titulos;
-    }
-  }
-  .main-texto {
-    font-size: 20px;
-    color: $color-parrafos;
-  }
-  .main-titulo-dos {
+/*main*/
+.main_contenedor {
+  @include contenedor-main;
+  .main-titulo {
     color: $color-titulos;
   }
-  @property --rotate {
-    syntax: "<angle>";
-    initial-value: 132deg;
-    inherits: false;
+}
+.main-texto {
+  font-size: 20px;
+  color: $color-parrafos;
+}
+.main-titulo-dos {
+  color: $color-titulos;
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+/*Footer*/
+.footer-a {
+  margin: 10px;
+  font-size: 20px;
+  color: $color-iconos;
+  &:hover {
+    color: $color-hover;
+    transition: color 0.5s;
   }
-  /*Footer*/
-  .footer-a {
-    margin: 10px;
-    font-size: 30px;
-    font-style: italic;
-    color: $color-iconos;
-    &:hover {
-      color: $color-hover;
-      transition: color 0.5s;
-    }
-  }
-  .form-label {
-    color: $color-titulos;
-  }
+}
+.form-label {
+  color: $color-titulos;
+}
