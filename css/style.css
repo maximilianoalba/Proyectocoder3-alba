@@ -7050,7 +7050,7 @@ progress {
 
 /*inicio de body*/
 body {
-  background: linear-gradient(-45deg, #ee7752, #e47012, #377f99, #23d5ab);
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
   height: 100vh;
